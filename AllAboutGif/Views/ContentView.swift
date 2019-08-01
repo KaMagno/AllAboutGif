@@ -19,7 +19,8 @@ struct ContentView : View {
                 Text("Request Random Gif")
             }
             List(self.gifBindableManager.gifs.identified(by: \.id)) { gif in
-                GifCell(image: #imageLiteral(resourceName: "default"), title: gif.id)
+                GifCell(title: gif.title.isEmpty ? gif.id : gif.title,
+                        imageURLPath: gif.gif?.url ?? "https://media.giphy.com/media/smGpsxCQzXwDS/giphy.gif")
             }
         }
     }

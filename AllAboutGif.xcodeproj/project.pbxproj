@@ -16,8 +16,10 @@
 		F721E33722B4733000F542DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F721E33522B4733000F542DA /* LaunchScreen.storyboard */; };
 		F721E34222B4733000F542DA /* AllAboutGifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721E34122B4733000F542DA /* AllAboutGifTests.swift */; };
 		F721E34D22B4733000F542DA /* AllAboutGifUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721E34C22B4733000F542DA /* AllAboutGifUITests.swift */; };
+		F73E92A922F3A88100578693 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73E92A822F3A88100578693 /* Dictionary+Extensions.swift */; };
 		F76305AC22F22D700008DC10 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76305AB22F22D700008DC10 /* APIManager.swift */; };
 		F796E0B622F38FD2003F3B1D /* GifBindableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796E0B522F38FD2003F3B1D /* GifBindableManager.swift */; };
+		F796E0B822F39EE2003F3B1D /* DataAsyncBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F796E0B722F39EE2003F3B1D /* DataAsyncBindable.swift */; };
 		F7F5C08122F1FF1800E64B94 /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5C08022F1FF1800E64B94 /* GifCell.swift */; };
 		F7F5C08722F2032200E64B94 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5C08622F2032200E64B94 /* Gif.swift */; };
 		F7F5C08922F2069C00E64B94 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F5C08822F2069C00E64B94 /* Response.swift */; };
@@ -56,8 +58,10 @@
 		F721E34822B4733000F542DA /* AllAboutGifUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllAboutGifUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F721E34C22B4733000F542DA /* AllAboutGifUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAboutGifUITests.swift; sourceTree = "<group>"; };
 		F721E34E22B4733000F542DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F73E92A822F3A88100578693 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		F76305AB22F22D700008DC10 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F796E0B522F38FD2003F3B1D /* GifBindableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifBindableManager.swift; sourceTree = "<group>"; };
+		F796E0B722F39EE2003F3B1D /* DataAsyncBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAsyncBindable.swift; sourceTree = "<group>"; };
 		F7F5C08022F1FF1800E64B94 /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 		F7F5C08622F2032200E64B94 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		F7F5C08822F2069C00E64B94 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				F721E32722B4732D00F542DA /* AppDelegate.swift */,
 				F721E32922B4732D00F542DA /* SceneDelegate.swift */,
+				F73E92A822F3A88100578693 /* Dictionary+Extensions.swift */,
 				F7F5C08222F202A200E64B94 /* Views */,
 				F796E0B422F38C2D003F3B1D /* Bindables */,
 				F7F5C08422F202C200E64B94 /* Controller */,
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F796E0B522F38FD2003F3B1D /* GifBindableManager.swift */,
+				F796E0B722F39EE2003F3B1D /* DataAsyncBindable.swift */,
 			);
 			path = Bindables;
 			sourceTree = "<group>";
@@ -333,7 +339,9 @@
 				F721E32F22B4732D00F542DA /* ContentView.swift in Sources */,
 				F721E32A22B4732D00F542DA /* SceneDelegate.swift in Sources */,
 				F796E0B622F38FD2003F3B1D /* GifBindableManager.swift in Sources */,
+				F796E0B822F39EE2003F3B1D /* DataAsyncBindable.swift in Sources */,
 				F7F5C08922F2069C00E64B94 /* Response.swift in Sources */,
+				F73E92A922F3A88100578693 /* Dictionary+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,17 @@
 import SwiftUI
 
 struct GifCell : View {
-    var image: UIImage = UIImage(imageLiteralResourceName: "default")
-    var title: String = "Some text"
+    @ObjectBinding var dataBindable: DataAsyncBindable
+    var title: String
+    
+    init(title: String, imageURLPath: String) {
+        self.title = title
+        self.dataBindable = DataAsyncBindable(urlPath: imageURLPath)
+    }
+    
     var body: some View {
         HStack {
-            Image(uiImage: image)
+            Image(uiImage: UIImage(data: dataBindable.data) ?? #imageLiteral(resourceName: "default"))
                 .resizable()
                 .frame(width: 40.0, height: 40.0)
             Text(title)
@@ -25,7 +31,7 @@ struct GifCell : View {
 #if DEBUG
 struct GifCell_Previews : PreviewProvider {
     static var previews: some View {
-        GifCell()
+        GifCell(title: "Some text", imageURLPath: "https://media.giphy.com/media/CEK6VlVkjTZ5u/giphy.gif")
     }
 }
 #endif
