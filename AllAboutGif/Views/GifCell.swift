@@ -19,7 +19,6 @@ struct GifCell : View {
             Text(title)
                 .bold()
         }
-        .relativeHeight(40)
     }
 }
 

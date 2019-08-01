@@ -19,7 +19,7 @@ struct ContentView : View {
                 Text("Request Random Gif")
             }
             List(self.gifBindableManager.gifs.identified(by: \.id)) { gif in
-                Text(gif.id)
+                GifCell(image: #imageLiteral(resourceName: "default"), title: gif.id)
             }
         }
     }
