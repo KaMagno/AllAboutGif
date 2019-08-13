@@ -9,20 +9,18 @@
 import Combine
 import SwiftUI
 
-final class GifBindableManager: BindableObject {
-    let didChange = PassthroughSubject<[Gif], Never>()
-    
-    var gifs:[Gif] = [Gif]()
+final class GifBindableManager: ObservableObject {
+    @Published var gifs:[Gif] = [Gif]()
     
     func load() {
         APIManager.requestReandomGif(searchTerm: "Lost") { (result) in
             switch result {
             case .success(let response):
-                self.gifs = response.results
-                DispatchQueue.main.async {
-                    print(self.gifs)
-                    self.didChange.send(self.gifs)
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else {return}
+                    self.gifs = response.results
                 }
+                
             case .failure(let error):
                 print(error)
             }

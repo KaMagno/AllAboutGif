@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct GifCell : View {
-    @ObjectBinding var dataBindable: DataAsyncBindable
+    @ObservedObject var dataBindable: DataAsyncBindable
     var title: String
     
     init(title: String, imageURLPath: String) {
@@ -19,7 +19,7 @@ struct GifCell : View {
     
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(data: dataBindable.data) ?? #imageLiteral(resourceName: "default"))
+            Image(uiImage: UIImage.gifImageWithData(dataBindable.data) ?? #imageLiteral(resourceName: "default"))
                 .resizable()
                 .frame(width: 40.0, height: 40.0)
             Text(title)

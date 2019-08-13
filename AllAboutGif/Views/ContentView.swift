@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView : View {
-    @ObjectBinding var gifBindableManager = GifBindableManager()
+    @ObservedObject var gifBindableManager = GifBindableManager()
     
     var body: some View {
         VStack {
@@ -18,7 +18,7 @@ struct ContentView : View {
             }) {
                 Text("Request Random Gif")
             }
-            List(self.gifBindableManager.gifs.identified(by: \.id)) { gif in
+            List(self.gifBindableManager.gifs) { gif in
                 GifCell(title: gif.title.isEmpty ? gif.id : gif.title,
                         imageURLPath: gif.gif?.url ?? "https://media.giphy.com/media/smGpsxCQzXwDS/giphy.gif")
             }

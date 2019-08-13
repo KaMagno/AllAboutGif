@@ -9,20 +9,16 @@
 import Combine
 import SwiftUI
 
-final class DataAsyncBindable: BindableObject {
-    var didChange = PassthroughSubject<Data, Never>()
-    var data = Data() {
-        didSet {
-            didChange.send(data)
-        }
-    }
+final class DataAsyncBindable: ObservableObject {
+    @Published var data = Data()
     
     init(urlPath: String) {
         guard let url = URL(string: urlPath) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let self = self else { return }
             guard let data = data else { return }
-            
+
             DispatchQueue.main.async { self.data = data }
             
             }.resume()

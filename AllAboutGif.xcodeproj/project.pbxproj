@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185C3D0A2303294C00D64E4A /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C3D092303294C00D64E4A /* UIImage+Gif.swift */; };
 		F721E32822B4732D00F542DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721E32722B4732D00F542DA /* AppDelegate.swift */; };
 		F721E32A22B4732D00F542DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F721E32922B4732D00F542DA /* SceneDelegate.swift */; };
 		F721E32D22B4732D00F542DA /* AllAboutGif.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F721E32B22B4732D00F542DA /* AllAboutGif.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		185C3D092303294C00D64E4A /* UIImage+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		F721E32422B4732D00F542DA /* AllAboutGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllAboutGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F721E32722B4732D00F542DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F721E32922B4732D00F542DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185C3D082303292E00D64E4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				185C3D092303294C00D64E4A /* UIImage+Gif.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F721E31B22B4732C00F542DA = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 				F721E32722B4732D00F542DA /* AppDelegate.swift */,
 				F721E32922B4732D00F542DA /* SceneDelegate.swift */,
 				F73E92A822F3A88100578693 /* Dictionary+Extensions.swift */,
+				185C3D082303292E00D64E4A /* Extensions */,
 				F7F5C08222F202A200E64B94 /* Views */,
 				F796E0B422F38C2D003F3B1D /* Bindables */,
 				F7F5C08422F202C200E64B94 /* Controller */,
@@ -337,6 +348,7 @@
 				F7F5C08722F2032200E64B94 /* Gif.swift in Sources */,
 				F7F5C08122F1FF1800E64B94 /* GifCell.swift in Sources */,
 				F721E32F22B4732D00F542DA /* ContentView.swift in Sources */,
+				185C3D0A2303294C00D64E4A /* UIImage+Gif.swift in Sources */,
 				F721E32A22B4732D00F542DA /* SceneDelegate.swift in Sources */,
 				F796E0B622F38FD2003F3B1D /* GifBindableManager.swift in Sources */,
 				F796E0B822F39EE2003F3B1D /* DataAsyncBindable.swift in Sources */,
